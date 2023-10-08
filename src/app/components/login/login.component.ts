@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 
@@ -16,15 +17,19 @@ export class LoginComponent {
   password: string = '';
 
 
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService, private router: Router){}
 
 
   async login() {
     try {
-      let resp = await this.authService.loginWithUsernameAndPasswort(this.username, this.password)
-        // redirect
-        console.log(resp);
+      let resp: any = await this.authService.loginWithUsernameAndPasswort(this.username, this.password)
+      console.log(resp);
+      localStorage.setItem('token', resp.token);
+      //  localStorage.setItem('token', resp.token);
+      this.router.navigateByUrl('/todos');
+      console.log(resp);
     } catch (e) {
+      alert('Anmeldung fehlgeschlagen - Passwoert oder Username falsch');
       console.log('Feher:', e);
     }
   }
