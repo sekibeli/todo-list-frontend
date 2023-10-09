@@ -25,6 +25,10 @@ error:string = '';
   loadTodos(){
     const url = environment.baseUrl + '/todos/';
     return lastValueFrom(this.http.get(url));
+  }
 
+  loadTodo(todo:any){
+    const url = environment.baseUrl + '/todo/';
+    return lastValueFrom(this.http.get(url));
   }
 }

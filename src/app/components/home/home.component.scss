@@ -1,0 +1,23 @@
+.header {
+    position: fixed; // Fixiert den Header oben
+    top: 0;
+    left: 0;
+    width: 100vw;    // Deckt die gesamte Breite des Viewports ab
+    height: 150px;
+    background: url('../../../assets/img/mountains-3699372_1280.jpg') no-repeat center center; // Bild als Hintergrund
+    background-size: cover;  // Stellt sicher, dass der Hintergrund den gesamten Header abdeckt
+    z-index: 1; // Optional, falls Sie sicherstellen möchten, dass der Header immer über anderen Elementen liegt.
+
+
+  
+    
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+
+}
+.containerLeft {
+    width: 49vw;
+}

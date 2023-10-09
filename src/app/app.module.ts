@@ -8,13 +8,19 @@ import { AllTodosComponent } from './components/all-todos/all-todos.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { NewTodoComponent } from './components/new-todo/new-todo.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AllTodosComponent
+    AllTodosComponent,
+    NewTodoComponent,
+    TodoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
