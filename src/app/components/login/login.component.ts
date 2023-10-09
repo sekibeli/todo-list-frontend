@@ -26,7 +26,7 @@ export class LoginComponent {
       console.log(resp);
       localStorage.setItem('token', resp.token);
       //  localStorage.setItem('token', resp.token);
-      this.router.navigateByUrl('/todos');
+      this.router.navigateByUrl('/home');
       console.log(resp);
     } catch (e) {
       alert('Anmeldung fehlgeschlagen - Passwort oder Username falsch');
