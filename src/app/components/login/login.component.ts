@@ -29,7 +29,7 @@ export class LoginComponent {
       this.router.navigateByUrl('/todos');
       console.log(resp);
     } catch (e) {
-      alert('Anmeldung fehlgeschlagen - Passwoert oder Username falsch');
+      alert('Anmeldung fehlgeschlagen - Passwort oder Username falsch');
       console.log('Feher:', e);
     }
   }
