@@ -34,4 +34,13 @@ export class TodoService {
     return lastValueFrom(this.http.get(url));
   }
 
+  createTodo(title: string){
+    const url = environment.baseUrl + '/todo/addTodo/';
+    const body = {
+      "title": title
+     }
+    
+    return lastValueFrom(this.http.post(url,body));
+  }
+
 }

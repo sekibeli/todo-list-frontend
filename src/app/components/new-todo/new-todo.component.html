@@ -1,1 +1,7 @@
-<p>new-todo works!</p>
+<div class="newTodoContainer">
+    <form (ngSubmit)="this.createTodo()">
+        <input type="text" name="title" [(ngModel)]="title" required>
+        <button class="myButton">Add</button>
+    </form>
+   
+</div>

@@ -7,17 +7,28 @@
     background: url('../../../assets/img/mountains-3699372_1280.jpg') no-repeat center center; // Bild als Hintergrund
     background-size: cover;  // Stellt sicher, dass der Hintergrund den gesamten Header abdeckt
     z-index: 1; // Optional, falls Sie sicherstellen möchten, dass der Header immer über anderen Elementen liegt.
-
-
-  
-    
+   
 }
 
+.headerOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 70%;
+    background-color: rgba($color: #00185a, $alpha: 0.5);
+    height: 150px;
+    z-index: 5;
+}
 .container {
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
 
 }
 .containerLeft {
     width: 49vw;
+}
+
+.newTodoContainer {
+    margin-top: 180px;
+    margin-left: 25px;
 }

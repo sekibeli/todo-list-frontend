@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,15 +8,21 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./new-todo.component.scss']
 })
 export class NewTodoComponent {
+title:string = '';
 
 
-  // createTodo(title:string){
-  //   const url = environment.baseUrl + '/todo/';
-  //   const body = {
-  //     "title": title
-      
-  //   }
-    
-  //   return lastValueFrom(this.http.post(url,body));
-  // }
+constructor(public todoService: TodoService){}
+  async createTodo() {
+    try {
+      let resp: any = await this.todoService.createTodo(this.title)
+      console.log(resp);
+   
+      console.log(resp);
+    } catch (e) {
+   
+      console.log('Feher:', e);
+    }
+  }
+
+
 }
