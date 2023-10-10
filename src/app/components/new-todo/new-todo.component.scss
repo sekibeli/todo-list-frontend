@@ -1,9 +1,27 @@
 input {
     padding: 5px;
-    border-radius: 5px;
-    width: 250px;
+    margin-right: 5px;
+    width: 230px;
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: whitesmoke
+
+    
+}
+
+input:focus {
+    outline: none;
 }
 
 .myButton {
-    padding: 5px;
+    padding: 5px 10px;
+    background-color: rgb(129, 167, 218);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
 }

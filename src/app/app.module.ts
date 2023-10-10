@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { HomeComponent } from './components/home/home.component';
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
     multi: true
-    }
+    },
+ 
   ],
   bootstrap: [AppComponent]
 })

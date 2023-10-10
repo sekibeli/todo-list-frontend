@@ -12,15 +12,16 @@ export class TodoService {
   private _selectedTodo = new BehaviorSubject<any>(null);
   selectedTodo$ = this._selectedTodo.asObservable();
   selectedTodo: any = null;
+ 
   constructor(private http: HttpClient) { }
 
   setSelectedTodo(todo: any) {
     this._selectedTodo.next(todo);
   }
 
-  getSelectedTodo() {
-    return this.selectedTodo;
-  }
+  // getSelectedTodo() {
+  //   return this.selectedTodo;
+  // }
 
   loadTodos() {
     const url = environment.baseUrl + '/todos/';

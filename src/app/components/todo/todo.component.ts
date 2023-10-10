@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
 import { TodoService } from 'src/app/services/todo.service';
-import { environment } from 'src/environments/environment';
+
+
 
 @Component({
   selector: 'app-todo',
@@ -18,5 +18,7 @@ public todo: any;
       this.todo = todo;
     });
   }
+
+  
 
  }

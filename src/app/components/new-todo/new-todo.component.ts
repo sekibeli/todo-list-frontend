@@ -16,9 +16,7 @@ constructor(public todoService: TodoService){}
     try {
       let resp: any = await this.todoService.createTodo(this.title)
       console.log(resp);
-   
-      console.log(resp);
-    } catch (e) {
+       } catch (e) {
    
       console.log('Feher:', e);
     }

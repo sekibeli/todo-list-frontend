@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AllTodosComponent implements OnInit {
   todos:any = [];
-error:string = '';
+ error:string = '';
   constructor(private http: HttpClient, public todoService: TodoService ){
     
   }
