@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/app/models/todo.class';
 import { TodoService } from 'src/app/services/todo.service';
 
 
@@ -11,9 +12,9 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class TodoComponent implements OnInit {
   public showEditContainer = false;
-  
-public todo: any;
-  constructor(private http: HttpClient,  private todoService: TodoService ){}
+
+  public todo: any;
+  constructor(private http: HttpClient, private todoService: TodoService) { }
 
   ngOnInit() {
     this.todoService.selectedTodo$.subscribe(todo => {
@@ -21,6 +22,12 @@ public todo: any;
     });
   }
 
-  updateItem(todo:any){}
-
+  updateItem(todo: Todo) {
+    this.todoService.updateTodo(todo).then(()=>{
+      this.showEditContainer = false;
+    }
+     
+    );
+  }
+   
  }

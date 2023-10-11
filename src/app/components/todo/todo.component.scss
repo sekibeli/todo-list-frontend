@@ -6,6 +6,7 @@ h2 {
 .todoDetail {
     font-size: 0.8em;
     color: rgb(255, 255, 255);
+    // width: 80%;
 }
 
 .editButton {
@@ -15,4 +16,13 @@ h2 {
 
 .containerDetail {
     padding: 5px 0;
+    width: 100%;
+   
+}
+
+.updateItem {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  
 }

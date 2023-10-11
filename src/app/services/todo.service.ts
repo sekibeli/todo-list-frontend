@@ -54,7 +54,7 @@ export class TodoService {
   deleteTodo(todo:any) {
     let todoId = todo.id;
     console.log('löschen ID:', todo.id)
-    const url = environment.baseUrl + `/todo/delete/${todoId}/`
+    const url = environment.baseUrl + `/todo/delete/${todoId}/`;
 
     return lastValueFrom(this.http.delete(url)).then(() => {
       // Hier aktualisieren Sie Ihren lokalen Zustand nach dem Löschen
@@ -65,8 +65,25 @@ export class TodoService {
   
   }
 
-  updateTodo(todo:any){
-    
+  updateTodo(todo:Todo){
+    let todoId = todo.id;
+    console.log('uodate ID:', todo.id)
+    const url = environment.baseUrl + `/todo/update/${todoId}/`;
+    const body = {
+      "title": todo.title,
+      "checked": todo.checked
+    }
+
+   console.log(todo.title ,todo.checked);
+    return lastValueFrom(this.http.patch(url, body)).then( (updatedTodo: any) => {
+        const currentTodos = this._todos.value;
+        const index = currentTodos.findIndex(t => t.id === updatedTodo.id);
+        if (index !== -1) {
+            currentTodos[index] = updatedTodo;
+            this._todos.next([...currentTodos]);
+        }
+
+  });
   }
 
 }
