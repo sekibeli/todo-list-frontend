@@ -12,10 +12,13 @@ title:string = '';
 
 
 constructor(public todoService: TodoService){}
-  async createTodo() {
+  
+
+async createTodo() {
     try {
       let resp: any = await this.todoService.createTodo(this.title)
       console.log(resp);
+      this.title = '';
        } catch (e) {
    
       console.log('Feher:', e);

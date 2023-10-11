@@ -10,6 +10,8 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
+  public showEditContainer = false;
+  
 public todo: any;
   constructor(private http: HttpClient,  private todoService: TodoService ){}
 
@@ -19,6 +21,6 @@ public todo: any;
     });
   }
 
-  
+  updateItem(todo:any){}
 
  }

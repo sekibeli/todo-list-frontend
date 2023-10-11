@@ -1,7 +1,13 @@
 
-<div *ngIf="todo" class="containerDetail">
+<div *ngIf="todo && !showEditContainer" class="containerDetail">
     <h2>{{ todo.title }}</h2> 
     <div class="todoDetail">Erstellt am: {{ todo.created_at | date:'dd.MM.yyyy'}}</div>
     <p> <input type="checkbox" [checked]="todo.checked"> Erledigt </p>
-    <button class="editButton">Edit</button>
+    <button class="editButton" (click)="showEditContainer = true">Edit</button>
+  </div>
+  <div *ngIf="todo && showEditContainer" class="containerDetail">
+    <h2><input type="text" name="title" [(ngModel)]="todo.title"></h2> 
+    <div class="todoDetail">Erstellt am: {{ todo.created_at | date:'dd.MM.yyyy'}}</div>
+    <p> <input type="checkbox" [checked]="todo.checked"> Erledigt </p>
+    <button class="editButton" (click)="updateItem(todo)">Save</button>
   </div>

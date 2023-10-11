@@ -1,8 +1,10 @@
 <h2>{{this.error}}</h2>
 <div class="containerLeft">
     <div *ngFor="let todo of todos">
-        <div class="todoItem" (click)="onTodoClick(todo)">
+        <div class="itemLine" >
+        <div class="todoItem" [ngClass]="{'done': todo.checked}" (click)="onTodoClick(todo)">
             {{todo.title}}</div>
-       
+            <div (click)="deleteItem(todo)"><img src="../../../assets/img/delete.png" alt=""></div>
+        </div>
     </div>
 </div>
