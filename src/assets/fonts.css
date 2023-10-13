@@ -4,7 +4,7 @@
     font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* cormorant-garamond-500 - latin */
   @font-face {
@@ -12,7 +12,7 @@
     font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 500;
-    src: url('./assets/fonts/cormorant-garamond-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/cormorant-garamond-v16-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* cormorant-garamond-600 - latin */
   @font-face {
@@ -20,7 +20,7 @@
     font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 600;
-    src: url('./assets/fonts/cormorant-garamond-v16-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/cormorant-garamond-v16-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* cormorant-garamond-700 - latin */
   @font-face {
@@ -28,7 +28,7 @@
     font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 700;
-    src: url('./assets/fonts/cormorant-garamond-v16-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('fonts/cormorant-garamond-v16-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
   /* baskervville-regular - latin */
@@ -37,5 +37,5 @@
   font-family: 'Baskervville';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/baskervville-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('fonts/baskervville-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
